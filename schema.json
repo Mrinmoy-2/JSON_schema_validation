@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "company_id": { "type": "integer",
+    "uniqueItems": true },
+      "company_name": { 
+        "type": "string",
+        "minLength":2,
+        "maxLength": 255 
+      },
+      "company_address": { 
+        "type": "string",
+        "maxLength": 255 
+      },
+      "company_country": { 
+        "type": "string",
+        "maxLength": 100 
+      },
+      "company_city": { 
+        "type": "string",
+        "maxLength": 100 
+      },
+      "company_zip": { 
+        "type": "string",
+        "maxLength": 20 
+      },
+      "company_state": { 
+        "type": "string",
+        "maxLength": 100 
+      },
+      "company_phone_number": { 
+        "type": "string",
+        "maxLength": 20 
+      },
+      "inserted_at": { 
+        "type": "string",
+        "format": "date-time" 
+      }
+    },
+    "required": ["company_id", "company_name", "company_country", "company_city", "inserted_at"],
+    "additionalProperties": false
+  }
+  
